@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:context="http://www.sptingframework.org/schema/context"
+ xmlns:p="http://www.sptingframework.org/schema/p"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+ https://www.springframework.org/schema/beans/spring-beans.xsd
+ http://www.sptingframework.org/schema/context
+ http://www.sptingframework.org/schema/context/spring-context.xsd">
+
+<bean class="com.springcore.lifecycle.Samosa" name="samosa">
+	<constructor-arg value="7.5" />
+</bean>
+
+<bean class="com.springcore.lifecycle.Samosa" name="paneer-samosa" init-method="init" destroy-method="destroy">
+	<constructor-arg value="15" />
+</bean>
+ 
+</beans>

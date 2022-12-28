@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:context="http://www.sptingframework.org/schema/context"
+ xmlns:p="http://www.sptingframework.org/schema/p"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+ https://www.springframework.org/schema/beans/spring-beans.xsd
+ http://www.sptingframework.org/schema/context
+ http://www.sptingframework.org/schema/context/spring-context.xsd">
+ 
+ 
+ <bean class="com.springcore.Student" id="student1">
+ 	<property name="studentId">
+ 		<value>558</value>
+ 	</property>
+ 	
+ 	<property name="studentName">
+ 		<value>Sumit Rajpal</value>
+ 	</property>
+ 	
+ 	<property name="studentAddress">
+ 		<value>Lucknow</value>
+ 	</property> 	
+ </bean>
+ 
+ <bean class="com.springcore.Student" id="student3">
+ 	<property name="studentId" value="0988845"/>
+ 	<property name="studentName" value="Sumit Rajpal"/>
+ 	<property name="studentAddress" value="Pahalmapur, patti, Pratapgarh-230135"/>
+ </bean>
+ 
+ <bean class="com.springcore.Student" id="student2">
+ 	<property name="studentName">
+ 		<value>Ashish</value>
+ 	</property>
+ </bean>
+ 
+ <!--using p: tag-->
+ <bean class="com.springcore.Student" id="student4" p:studentId="1736558" p:studentName="Amit Raj Pal" p:studentAddress="Gangotti Enclave, Lucknow"/>
+ 
+ 
+ 
+</beans>

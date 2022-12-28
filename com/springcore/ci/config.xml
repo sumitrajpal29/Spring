@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:context="http://www.sptingframework.org/schema/context"
+ xmlns:p="http://www.sptingframework.org/schema/p"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+ https://www.springframework.org/schema/beans/spring-beans.xsd
+ http://www.sptingframework.org/schema/context
+ http://www.sptingframework.org/schema/context/spring-context.xsd">
+ 
+ <bean class="com.springcore.ci.Certi" name="certi">
+ 	<constructor-arg value="Android Using Kotlin"/>
+ </bean>
+ 
+ <bean class="com.springcore.ci.Person" name="person">
+ 	<constructor-arg>
+ 	<list>
+ 	<value>Java</value>
+ 	<value>XML</value>
+ 	<value>Kotlin</value>
+ 	<value>Gradle</value>
+ 	</list>
+ 	</constructor-arg>
+ 	<constructor-arg value="Mohan" type="String"/>
+ 	<constructor-arg value="27" type="int"/> 
+ 	<constructor-arg ref="certi" type="Certi"/>
+ </bean>
+ 
+ <bean class="com.springcore.ci.Adition" name="add">
+ 	 <constructor-arg value="32" type="int" />
+ 	 <constructor-arg value="33" type="int" index="0"/>
+ </bean>
+ 
+</beans>

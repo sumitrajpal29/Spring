@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:context="http://www.sptingframework.org/schema/context"
+ xmlns:p="http://www.sptingframework.org/schema/p"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+ https://www.springframework.org/schema/beans/spring-beans.xsd
+ http://www.sptingframework.org/schema/context
+ http://www.sptingframework.org/schema/context/spring-context.xsd">
+ 
+ <!-- bean for collections data type -->
+ <bean class="com.springcore.collections.Emp" id="collectionsBean">
+ <property name="auth">
+ <props>
+ <prop key="admin">admin123</prop>
+ <prop key="user">user123</prop>
+ <prop key="root">root123</prop>
+ </props>
+ </property>
+ <property name="name">
+ <value>Sumit</value>
+ </property>
+ <property name="phones">
+ <list>
+ <value>9794911755</value>
+ <value>7007780373</value>
+ </list>
+ </property>
+ <property name="address">
+ <set>
+ <value>Lucknow</value>
+ <value>Delhi</value>
+ <value>Pratapgarh</value>
+ </set>
+ </property>
+ <property name="courses">
+ <map>
+ <entry key="U.G." value="B.Tech"/>
+ <entry key="12th" value="U.P. Board(English)"/>
+ <entry key="10th" value="U.P. Board(Hindi)"/>
+ </map>
+ </property>
+ </bean>
+ 
+</beans>
